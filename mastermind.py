@@ -1,14 +1,25 @@
 import random
 
-# Red, Green, Blue, Yellow, Purple, White
-COLORS = ["R", "G", "B", "Y", "P", "W"]
-LENGTH = 4
-NB_TRY = 12
+# PARAMETRES :
+# Il suffit d'ajouter une lettre associé à une couleur sous le formant "LETTRE": "Nom_de_la_couleur"
+COLORS = {
+    "R": "Red",
+    "G": "Green",
+    "B": "Blue",
+    "Y": "Yellow",
+    "P": "Purple",
+    "W": "White",
+}
+LENGTH = 4  # nombre d'éléments dans le code secret
+NB_TRY = 12  # nombre maximal de tentatives pour la résolution du code secret
+
 
 def random_code():
     code = []
+    # Ici on crée la liste des lettres pour le code secret, liste associé aux couleurs disponibles définies dans COLORS
+    lettres = list(COLORS)
     for i in range(LENGTH):
-        code.append(random.choice(COLORS))
+        code.append(random.choice(lettres))
     return code
 
 def verif_essai(essai, code_secret):
