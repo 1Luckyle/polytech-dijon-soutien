@@ -91,7 +91,6 @@ def input_essai():
 def game():
     print("Couleurs disponibles :", ", ".join(COLORS))
     code_secret = random_code()
-    print(f"{code_secret} (Debug: code secret généré, à supprimer en production)")
 
     for essai_numero in range(1, NB_TRY + 1):
         essai = input_essai()
