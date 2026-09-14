@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Statistiques locales du jeu (fichiers caches, generes a l'execution)
+.mastermind_nb_parties
+.mastermind_score_total
+.mastermind_parties
+.mastermind_score
